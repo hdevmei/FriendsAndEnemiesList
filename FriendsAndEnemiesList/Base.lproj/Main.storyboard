@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="map-cE-gAn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="67O-Wf-oHr">
+            <objects>
+                <viewController id="pCi-zu-ITl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yPY-pf-sEr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ANo-10-i7i"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="WvJ-0E-q5P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUD-26-J8E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-568" y="88"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="Kpa-uV-YaJ">
+            <objects>
+                <viewController id="z5d-2J-acI" customClass="HomeViewController" customModule="FriendsAndEnemiesList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zW0-3W-xBa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qdJ-gp-YqH">
+                                <rect key="frame" x="0.0" y="64" width="414" height="32"/>
+                                <segments>
+                                    <segment title="Friends"/>
+                                    <segment title="Enemies"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="z5d-2J-acI" eventType="valueChanged" id="Kbe-GK-v2t"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUM-m9-akk">
+                                <rect key="frame" x="0.0" y="95" width="414" height="718"/>
+                                <connections>
+                                    <segue destination="6wK-OM-nkq" kind="embed" id="kRE-cu-WeR"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLb-16-lWI">
+                                <rect key="frame" x="0.0" y="95" width="414" height="718"/>
+                                <connections>
+                                    <segue destination="J0a-by-atw" kind="embed" id="Zte-QW-hoZ"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T2U-CC-pPE"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bUM-m9-akk" secondAttribute="bottom" constant="83" id="5Mx-i5-JzE"/>
+                            <constraint firstItem="bUM-m9-akk" firstAttribute="leading" secondItem="T2U-CC-pPE" secondAttribute="leading" id="Bar-fx-n5z"/>
+                            <constraint firstItem="qdJ-gp-YqH" firstAttribute="top" secondItem="T2U-CC-pPE" secondAttribute="top" constant="20" id="ENY-6Y-fBO"/>
+                            <constraint firstItem="nLb-16-lWI" firstAttribute="top" secondItem="qdJ-gp-YqH" secondAttribute="bottom" id="L6V-5U-IbU"/>
+                            <constraint firstItem="T2U-CC-pPE" firstAttribute="bottom" secondItem="nLb-16-lWI" secondAttribute="bottom" id="Up7-28-5JN"/>
+                            <constraint firstItem="bUM-m9-akk" firstAttribute="trailing" secondItem="T2U-CC-pPE" secondAttribute="trailing" id="XSb-zR-doE"/>
+                            <constraint firstItem="qdJ-gp-YqH" firstAttribute="leading" secondItem="T2U-CC-pPE" secondAttribute="leading" id="fcQ-lo-oa7"/>
+                            <constraint firstItem="bUM-m9-akk" firstAttribute="top" secondItem="qdJ-gp-YqH" secondAttribute="bottom" id="ftQ-p6-ZP7"/>
+                            <constraint firstItem="T2U-CC-pPE" firstAttribute="trailing" secondItem="nLb-16-lWI" secondAttribute="trailing" id="oaS-xr-vcV"/>
+                            <constraint firstItem="nLb-16-lWI" firstAttribute="leading" secondItem="T2U-CC-pPE" secondAttribute="leading" id="qAD-SW-L76"/>
+                            <constraint firstItem="T2U-CC-pPE" firstAttribute="trailing" secondItem="qdJ-gp-YqH" secondAttribute="trailing" id="sFP-Ph-VMm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="2P1-dW-xTh"/>
+                    <connections>
+                        <outlet property="enemiesView" destination="nLb-16-lWI" id="zB2-Cl-0Ef"/>
+                        <outlet property="friendsView" destination="bUM-m9-akk" id="LlW-1r-N8O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OiJ-Yz-gdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-568.1159420289855" y="-628.125"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="D8y-2t-9MS">
+            <objects>
+                <tabBarController id="map-cE-gAn" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LAn-FC-OiM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="z5d-2J-acI" kind="relationship" relationship="viewControllers" id="lHg-Ll-VEK"/>
+                        <segue destination="pCi-zu-ITl" kind="relationship" relationship="viewControllers" id="JzR-Ra-eEE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LOB-Mk-GbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1461" y="-215"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EUX-67-5yK">
+            <objects>
+                <viewController id="6wK-OM-nkq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9GO-VB-dN2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pGA-1e-EWJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="-967"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wSs-Xz-gQz">
+            <objects>
+                <viewController id="J0a-by-atw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XfM-LA-0gH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0n-2a-26x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="-589"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
