@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0F4E9729469B7700424043 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0F4E9629469B7700424043 /* FriendsViewController.swift */; };
+		AF0F4E992946AA2100424043 /* EnemiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0F4E982946AA2100424043 /* EnemiesViewController.swift */; };
 		AFB3FB5429468A5D005CB198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3FB5329468A5D005CB198 /* AppDelegate.swift */; };
 		AFB3FB5629468A5D005CB198 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3FB5529468A5D005CB198 /* SceneDelegate.swift */; };
 		AFB3FB5829468A5D005CB198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3FB5729468A5D005CB198 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF0F4E9629469B7700424043 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = ../FriendsViewController.swift; sourceTree = "<group>"; };
+		AF0F4E982946AA2100424043 /* EnemiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemiesViewController.swift; sourceTree = "<group>"; };
 		AFB3FB5029468A5D005CB198 /* FriendsAndEnemiesList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsAndEnemiesList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB3FB5329468A5D005CB198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB3FB5529468A5D005CB198 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +62,11 @@
 		AFB3FB5229468A5D005CB198 /* FriendsAndEnemiesList */ = {
 			isa = PBXGroup;
 			children = (
+				AF0F4E9629469B7700424043 /* FriendsViewController.swift */,
 				AFB3FB6729468E01005CB198 /* HomeViewController.swift */,
 				AFB3FB5329468A5D005CB198 /* AppDelegate.swift */,
 				AFB3FB5529468A5D005CB198 /* SceneDelegate.swift */,
+				AF0F4E982946AA2100424043 /* EnemiesViewController.swift */,
 				AFB3FB5729468A5D005CB198 /* ViewController.swift */,
 				AFB3FB5929468A5D005CB198 /* Main.storyboard */,
 				AFB3FB5C29468A5E005CB198 /* Assets.xcassets */,
@@ -142,8 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB3FB5829468A5D005CB198 /* ViewController.swift in Sources */,
+				AF0F4E992946AA2100424043 /* EnemiesViewController.swift in Sources */,
 				AFB3FB5429468A5D005CB198 /* AppDelegate.swift in Sources */,
 				AFB3FB5629468A5D005CB198 /* SceneDelegate.swift in Sources */,
+				AF0F4E9729469B7700424043 /* FriendsViewController.swift in Sources */,
 				AFB3FB6829468E01005CB198 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
